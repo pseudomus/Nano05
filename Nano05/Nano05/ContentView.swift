@@ -8,12 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var cameraVm = CameraModel()
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            CameraView(image: cameraVm.frama)
         }
         .padding()
     }

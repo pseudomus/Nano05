@@ -11,6 +11,8 @@
 		E0AA6EA62B8D11BC00FD8D82 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA6EA52B8D11BC00FD8D82 /* ContentView.swift */; };
 		E0AA6EA82B8D11BD00FD8D82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0AA6EA72B8D11BD00FD8D82 /* Assets.xcassets */; };
 		E0AA6EAB2B8D11BD00FD8D82 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0AA6EAA2B8D11BD00FD8D82 /* Preview Assets.xcassets */; };
+		E0AA6EB32B8D121700FD8D82 /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA6EB22B8D121700FD8D82 /* CameraModel.swift */; };
+		E0AA6EB52B8D122000FD8D82 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA6EB42B8D122000FD8D82 /* CameraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		E0AA6EA52B8D11BC00FD8D82 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E0AA6EA72B8D11BD00FD8D82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0AA6EAA2B8D11BD00FD8D82 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E0AA6EB22B8D121700FD8D82 /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
+		E0AA6EB42B8D122000FD8D82 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 		E0AA6EA22B8D11BC00FD8D82 /* Nano05 */ = {
 			isa = PBXGroup;
 			children = (
+				E0AA6EB12B8D11F600FD8D82 /* Camera */,
 				E0AA6EA32B8D11BC00FD8D82 /* Nano05App.swift */,
 				E0AA6EA52B8D11BC00FD8D82 /* ContentView.swift */,
 				E0AA6EA72B8D11BD00FD8D82 /* Assets.xcassets */,
@@ -65,6 +70,15 @@
 				E0AA6EAA2B8D11BD00FD8D82 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E0AA6EB12B8D11F600FD8D82 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA6EB22B8D121700FD8D82 /* CameraModel.swift */,
+				E0AA6EB42B8D122000FD8D82 /* CameraView.swift */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +153,8 @@
 			files = (
 				E0AA6EA62B8D11BC00FD8D82 /* ContentView.swift in Sources */,
 				E0AA6EA42B8D11BC00FD8D82 /* Nano05App.swift in Sources */,
+				E0AA6EB32B8D121700FD8D82 /* CameraModel.swift in Sources */,
+				E0AA6EB52B8D122000FD8D82 /* CameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +291,7 @@
 				DEVELOPMENT_TEAM = SRXHT55569;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Permission to use device camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +321,7 @@
 				DEVELOPMENT_TEAM = SRXHT55569;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Permission to use device camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
