@@ -12,8 +12,8 @@ struct ContentView: View {
     var body: some View {
         VStack {
             CameraView(image: cameraVm.frama)
+                .ignoresSafeArea()
         }
-        .padding()
     }
 }
 
