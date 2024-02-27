@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct Nano05App: App {
+    
+    @StateObject var cameraVm = CameraModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(cameraVm)
         }
     }
 }

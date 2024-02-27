@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var cameraVm = CameraModel()
+
+    @EnvironmentObject var cameraVm: CameraModel
+    
     var body: some View {
-        VStack {
+        ZStack {
             CameraView(image: cameraVm.frama)
                 .ignoresSafeArea()
+
         }
     }
 }
