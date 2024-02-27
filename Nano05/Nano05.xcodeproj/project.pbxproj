@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C010E7D42B8E55A800F4A52C /* HomeObjects.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C010E7D32B8E55A800F4A52C /* HomeObjects.mlmodel */; };
 		E0AA6EA42B8D11BC00FD8D82 /* Nano05App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA6EA32B8D11BC00FD8D82 /* Nano05App.swift */; };
 		E0AA6EA62B8D11BC00FD8D82 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA6EA52B8D11BC00FD8D82 /* ContentView.swift */; };
 		E0AA6EA82B8D11BD00FD8D82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0AA6EA72B8D11BD00FD8D82 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C010E7D32B8E55A800F4A52C /* HomeObjects.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = HomeObjects.mlmodel; sourceTree = "<group>"; };
 		E0AA6EA02B8D11BC00FD8D82 /* Nano05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nano05.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0AA6EA32B8D11BC00FD8D82 /* Nano05App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nano05App.swift; sourceTree = "<group>"; };
 		E0AA6EA52B8D11BC00FD8D82 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			children = (
 				E0AA6EB12B8D11F600FD8D82 /* Camera */,
 				E0AA6EA32B8D11BC00FD8D82 /* Nano05App.swift */,
+				C010E7D32B8E55A800F4A52C /* HomeObjects.mlmodel */,
 				E0AA6EA52B8D11BC00FD8D82 /* ContentView.swift */,
 				E0AA6EA72B8D11BD00FD8D82 /* Assets.xcassets */,
 				E0AA6EA92B8D11BD00FD8D82 /* Preview Content */,
@@ -153,6 +156,7 @@
 			files = (
 				E0AA6EA62B8D11BC00FD8D82 /* ContentView.swift in Sources */,
 				E0AA6EA42B8D11BC00FD8D82 /* Nano05App.swift in Sources */,
+				C010E7D42B8E55A800F4A52C /* HomeObjects.mlmodel in Sources */,
 				E0AA6EB32B8D121700FD8D82 /* CameraModel.swift in Sources */,
 				E0AA6EB52B8D122000FD8D82 /* CameraView.swift in Sources */,
 			);
