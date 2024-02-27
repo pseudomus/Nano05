@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct GameplayView: View {
-
     @EnvironmentObject var cameraVm: CameraModel
     
     var body: some View {

@@ -10,7 +10,7 @@ struct MenuView: View {
                     NavigationButton(label: "SinglePlayer", color: .blue)
                 }
                 NavigationLink {
-                    GameplayView()
+                    MultiplayerMain()
                 } label: {
                     NavigationButton(label: "Multiplayer", color: .blue)
                 }
