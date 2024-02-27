@@ -13,6 +13,7 @@ import Foundation
 class CameraModel:NSObject, ObservableObject {
     
     @Published var frama:UIImage?
+    private var lastFrames:[UIImage] = []
     private var captureSession:AVCaptureSession = AVCaptureSession()
     private var videoOutput:AVCaptureVideoDataOutput = AVCaptureVideoDataOutput()
     private var context = CIContext()
@@ -94,11 +95,49 @@ class CameraModel:NSObject, ObservableObject {
             guard let pixelBuffer = frama?.toCVPixelBuffer() else { return }
             let prediction = try model.prediction(image: pixelBuffer)
             
-            print("\(prediction.target)")
-            print("rodou")
+            if verifyTarget(target: prediction.target){
+                print("\(prediction.target)")
+                print("rodou")
+            } else {
+                
+            }
         } catch {
             // Lide com o erro aqui, por exemplo, imprimindo a mensagem de erro
             print("Erro ao classificar a imagem: \(error)")
+        }
+    }
+    
+    func verifyTarget(target:String)-> Bool {
+        var targetCount = 0
+        var framesToAnalyze = self.lastFrames
+        
+        do{
+            for frame in framesToAnalyze{
+                let model = try HomeObjects(configuration: MLModelConfiguration())
+                guard let pixelBuffer = frame.toCVPixelBuffer() else { return false }
+                let prediction = try model.prediction(image: pixelBuffer)
+                if prediction.target == target {
+                    targetCount += 1
+                }
+            }
+            if targetCount == 8 {
+                return true
+            } else {
+                return false
+            }
+            
+        }catch {
+            print("erro ao classificar imagem")
+        }
+        return false
+    }
+    
+    func lastFramesControl(uiImage:UIImage) {
+        if lastFrames.count < 8 {
+            lastFrames.append(uiImage)
+        } else if lastFrames.count == 8 {
+            lastFrames.removeFirst()
+            lastFrames.append(uiImage)
         }
     }
 
@@ -107,9 +146,10 @@ class CameraModel:NSObject, ObservableObject {
 extension CameraModel: AVCaptureVideoDataOutputSampleBufferDelegate{
     
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        guard let cgImage = imageFromSampleBuffer(sampleBuffer: sampleBuffer) else {return}
+        guard let uiImage = imageFromSampleBuffer(sampleBuffer: sampleBuffer) else {return}
+        lastFramesControl(uiImage: uiImage)
         DispatchQueue.main.async { [unowned self] in
-            self.frama = cgImage
+            self.frama = uiImage
         }
     }
     
@@ -119,28 +159,5 @@ extension CameraModel: AVCaptureVideoDataOutputSampleBufferDelegate{
         guard let cgImage = context.createCGImage(ciImage, from: ciImage.extent) else {return nil}
         let uiImage = UIImage(cgImage: cgImage)
         return uiImage
-    }
-}
-
-extension UIImage {
-    // https://www.hackingwithswift.com/whats-new-in-ios-11
-    func toCVPixelBuffer() -> CVPixelBuffer? {
-        let attrs = [kCVPixelBufferCGImageCompatibilityKey: kCFBooleanTrue, kCVPixelBufferCGBitmapContextCompatibilityKey: kCFBooleanTrue] as CFDictionary
-        var pixelBuffer : CVPixelBuffer?
-        let status = CVPixelBufferCreate(kCFAllocatorDefault, Int(self.size.width), Int(self.size.height), kCVPixelFormatType_32ARGB, attrs, &pixelBuffer)
-        guard (status == kCVReturnSuccess) else {
-            return nil
-        }
-        CVPixelBufferLockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
-        let pixelData = CVPixelBufferGetBaseAddress(pixelBuffer!)
-        let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
-        let context = CGContext(data: pixelData, width: Int(self.size.width), height: Int(self.size.height), bitsPerComponent: 8, bytesPerRow: CVPixelBufferGetBytesPerRow(pixelBuffer!), space: rgbColorSpace, bitmapInfo: CGImageAlphaInfo.noneSkipFirst.rawValue)
-        context?.translateBy(x: 0, y: self.size.height)
-        context?.scaleBy(x: 1.0, y: -1.0)
-        UIGraphicsPushContext(context!)
-        self.draw(in: CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height))
-        UIGraphicsPopContext()
-        CVPixelBufferUnlockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
-        return pixelBuffer
     }
 }
