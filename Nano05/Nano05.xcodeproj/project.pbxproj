@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		C010E7D42B8E55A800F4A52C /* HomeObjects.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C010E7D32B8E55A800F4A52C /* HomeObjects.mlmodel */; };
+		E023656C2B8E68FB00C04C1E /* PhotoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E023656B2B8E68FB00C04C1E /* PhotoButton.swift */; };
+		E023656E2B8E690600C04C1E /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E023656D2B8E690600C04C1E /* NavigationButton.swift */; };
+		E02365712B8E69C700C04C1E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02365702B8E69C700C04C1E /* MenuView.swift */; };
 		E0AA6EA42B8D11BC00FD8D82 /* Nano05App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA6EA32B8D11BC00FD8D82 /* Nano05App.swift */; };
-		E0AA6EA62B8D11BC00FD8D82 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA6EA52B8D11BC00FD8D82 /* ContentView.swift */; };
+		E0AA6EA62B8D11BC00FD8D82 /* GameplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA6EA52B8D11BC00FD8D82 /* GameplayView.swift */; };
 		E0AA6EA82B8D11BD00FD8D82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0AA6EA72B8D11BD00FD8D82 /* Assets.xcassets */; };
 		E0AA6EAB2B8D11BD00FD8D82 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0AA6EAA2B8D11BD00FD8D82 /* Preview Assets.xcassets */; };
 		E0AA6EB32B8D121700FD8D82 /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA6EB22B8D121700FD8D82 /* CameraModel.swift */; };
@@ -18,9 +21,12 @@
 
 /* Begin PBXFileReference section */
 		C010E7D32B8E55A800F4A52C /* HomeObjects.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = HomeObjects.mlmodel; sourceTree = "<group>"; };
+		E023656B2B8E68FB00C04C1E /* PhotoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoButton.swift; sourceTree = "<group>"; };
+		E023656D2B8E690600C04C1E /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
+		E02365702B8E69C700C04C1E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		E0AA6EA02B8D11BC00FD8D82 /* Nano05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nano05.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0AA6EA32B8D11BC00FD8D82 /* Nano05App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nano05App.swift; sourceTree = "<group>"; };
-		E0AA6EA52B8D11BC00FD8D82 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E0AA6EA52B8D11BC00FD8D82 /* GameplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplayView.swift; sourceTree = "<group>"; };
 		E0AA6EA72B8D11BD00FD8D82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0AA6EAA2B8D11BD00FD8D82 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E0AA6EB22B8D121700FD8D82 /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
@@ -38,6 +44,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E023656A2B8E68E100C04C1E /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				E023656B2B8E68FB00C04C1E /* PhotoButton.swift */,
+				E023656D2B8E690600C04C1E /* NavigationButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		E023656F2B8E695C00C04C1E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E0AA6EA52B8D11BC00FD8D82 /* GameplayView.swift */,
+				E02365702B8E69C700C04C1E /* MenuView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E0AA6E972B8D11BC00FD8D82 = {
 			isa = PBXGroup;
 			children = (
@@ -57,10 +81,11 @@
 		E0AA6EA22B8D11BC00FD8D82 /* Nano05 */ = {
 			isa = PBXGroup;
 			children = (
+				E023656F2B8E695C00C04C1E /* Views */,
+				E023656A2B8E68E100C04C1E /* Buttons */,
 				E0AA6EB12B8D11F600FD8D82 /* Camera */,
 				E0AA6EA32B8D11BC00FD8D82 /* Nano05App.swift */,
 				C010E7D32B8E55A800F4A52C /* HomeObjects.mlmodel */,
-				E0AA6EA52B8D11BC00FD8D82 /* ContentView.swift */,
 				E0AA6EA72B8D11BD00FD8D82 /* Assets.xcassets */,
 				E0AA6EA92B8D11BD00FD8D82 /* Preview Content */,
 			);
@@ -154,11 +179,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0AA6EA62B8D11BC00FD8D82 /* ContentView.swift in Sources */,
+				E023656E2B8E690600C04C1E /* NavigationButton.swift in Sources */,
+				E02365712B8E69C700C04C1E /* MenuView.swift in Sources */,
+				E0AA6EA62B8D11BC00FD8D82 /* GameplayView.swift in Sources */,
 				E0AA6EA42B8D11BC00FD8D82 /* Nano05App.swift in Sources */,
 				C010E7D42B8E55A800F4A52C /* HomeObjects.mlmodel in Sources */,
 				E0AA6EB32B8D121700FD8D82 /* CameraModel.swift in Sources */,
 				E0AA6EB52B8D122000FD8D82 /* CameraView.swift in Sources */,
+				E023656C2B8E68FB00C04C1E /* PhotoButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +320,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Nano05/Preview Content\"";
-				DEVELOPMENT_TEAM = J7Y95G67T3;
+				DEVELOPMENT_TEAM = SRXHT55569;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Permission to use device camera";
@@ -322,7 +350,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Nano05/Preview Content\"";
-				DEVELOPMENT_TEAM = J7Y95G67T3;
+				DEVELOPMENT_TEAM = SRXHT55569;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Permission to use device camera";
