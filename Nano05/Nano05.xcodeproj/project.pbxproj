@@ -16,6 +16,7 @@
 		E023656C2B8E68FB00C04C1E /* PhotoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E023656B2B8E68FB00C04C1E /* PhotoButton.swift */; };
 		E023656E2B8E690600C04C1E /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E023656D2B8E690600C04C1E /* NavigationButton.swift */; };
 		E02365712B8E69C700C04C1E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02365702B8E69C700C04C1E /* MenuView.swift */; };
+		E02365742B8E7A8200C04C1E /* UIimageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02365732B8E7A8200C04C1E /* UIimageExtension.swift */; };
 		E0AA6EA42B8D11BC00FD8D82 /* Nano05App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA6EA32B8D11BC00FD8D82 /* Nano05App.swift */; };
 		E0AA6EA62B8D11BC00FD8D82 /* GameplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA6EA52B8D11BC00FD8D82 /* GameplayView.swift */; };
 		E0AA6EA82B8D11BD00FD8D82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0AA6EA72B8D11BD00FD8D82 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		E023656B2B8E68FB00C04C1E /* PhotoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoButton.swift; sourceTree = "<group>"; };
 		E023656D2B8E690600C04C1E /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
 		E02365702B8E69C700C04C1E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		E02365732B8E7A8200C04C1E /* UIimageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIimageExtension.swift; sourceTree = "<group>"; };
 		E0AA6EA02B8D11BC00FD8D82 /* Nano05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nano05.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0AA6EA32B8D11BC00FD8D82 /* Nano05App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nano05App.swift; sourceTree = "<group>"; };
 		E0AA6EA52B8D11BC00FD8D82 /* GameplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplayView.swift; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		E02365722B8E7A6200C04C1E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E02365732B8E7A8200C04C1E /* UIimageExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		E0AA6E972B8D11BC00FD8D82 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				D9190BF92B8E7DCE00965D55 /* SharePlay */,
+				E02365722B8E7A6200C04C1E /* Extensions */,
 				E023656F2B8E695C00C04C1E /* Views */,
 				E023656A2B8E68E100C04C1E /* Buttons */,
 				E0AA6EB12B8D11F600FD8D82 /* Camera */,
@@ -216,6 +227,7 @@
 				D9190BFB2B8E7E1300965D55 /* GroupActivityMetadate.swift in Sources */,
 				E0AA6EA62B8D11BC00FD8D82 /* GameplayView.swift in Sources */,
 				E0AA6EA42B8D11BC00FD8D82 /* Nano05App.swift in Sources */,
+				E02365742B8E7A8200C04C1E /* UIimageExtension.swift in Sources */,
 				C010E7D42B8E55A800F4A52C /* HomeObjects.mlmodel in Sources */,
 				E0AA6EB32B8D121700FD8D82 /* CameraModel.swift in Sources */,
 				D9190BFD2B8E7E6800965D55 /* SharePlayModel.swift in Sources */,
