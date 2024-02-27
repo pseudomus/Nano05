@@ -292,7 +292,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Nano05/Preview Content\"";
-				DEVELOPMENT_TEAM = SRXHT55569;
+				DEVELOPMENT_TEAM = J7Y95G67T3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Permission to use device camera";
@@ -322,7 +322,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Nano05/Preview Content\"";
-				DEVELOPMENT_TEAM = SRXHT55569;
+				DEVELOPMENT_TEAM = J7Y95G67T3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Permission to use device camera";

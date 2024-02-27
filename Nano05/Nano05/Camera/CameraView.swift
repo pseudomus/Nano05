@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CameraView: View {
     
+    @EnvironmentObject var cameraVm: CameraModel
+    
     var image:UIImage?
     
     var body: some View {
@@ -22,7 +24,11 @@ struct CameraView: View {
                 Text("teste")
                     .foregroundStyle(.white)
             }
-            
+            Button {
+                cameraVm.classifyImage()
+            } label: {
+                Text("Funciona")
+            }
         }
     }
 }
