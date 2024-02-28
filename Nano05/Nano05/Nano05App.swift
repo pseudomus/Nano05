@@ -9,13 +9,14 @@ import SwiftUI
 
 @main
 struct Nano05App: App {
-    
+    @StateObject private var SharePlayVM: SharePlayViewModel = SharePlayViewModel()
     @StateObject var cameraVm = CameraModel()
     
     var body: some Scene {
         WindowGroup {
             MenuView()
                 .environmentObject(cameraVm)
+                .environmentObject(SharePlayVM)
         }
     }
 }
