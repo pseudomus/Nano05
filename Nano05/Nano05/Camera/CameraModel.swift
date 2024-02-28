@@ -89,27 +89,27 @@ class CameraModel:NSObject, ObservableObject {
         captureSession.addInput(backInput!)
     }
     
-    func classifyImage() {
+    func classifyImage()-> String {
         do {
             let model = try HomeObjects(configuration: MLModelConfiguration())
-            guard let pixelBuffer = frama?.toCVPixelBuffer() else { return }
+            guard let pixelBuffer = frama?.toCVPixelBuffer() else { return "" }
             let prediction = try model.prediction(image: pixelBuffer)
             
             if verifyTarget(target: prediction.target){
-                print("\(prediction.target)")
-                print("rodou")
+                return prediction.target
             } else {
-                
+                return ""
             }
         } catch {
             // Lide com o erro aqui, por exemplo, imprimindo a mensagem de erro
             print("Erro ao classificar a imagem: \(error)")
         }
+        return ""
     }
     
     func verifyTarget(target:String)-> Bool {
         var targetCount = 0
-        var framesToAnalyze = self.lastFrames
+        let framesToAnalyze = self.lastFrames
         
         do{
             for frame in framesToAnalyze{
@@ -140,7 +140,7 @@ class CameraModel:NSObject, ObservableObject {
             lastFrames.append(uiImage)
         }
     }
-
+    
 }
 
 extension CameraModel: AVCaptureVideoDataOutputSampleBufferDelegate{

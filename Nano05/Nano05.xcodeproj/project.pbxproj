@@ -13,6 +13,8 @@
 		D9190BFF2B8E7E8C00965D55 /* SharePlayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9190BFE2B8E7E8C00965D55 /* SharePlayViewModel.swift */; };
 		D9190C012B8E7ECF00965D55 /* InvationSharePlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9190C002B8E7ECF00965D55 /* InvationSharePlayView.swift */; };
 		D9190C042B8E823B00965D55 /* MultiplayerMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9190C032B8E823B00965D55 /* MultiplayerMain.swift */; };
+		D9255AF02B8FC55B0049696A /* GameplayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9255AEF2B8FC55B0049696A /* GameplayViewModel.swift */; };
+		D9255AF22B8FC5C60049696A /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9255AF12B8FC5C60049696A /* CameraModel.swift */; };
 		D92EEDE02B8FAE7A008C43E0 /* Logic in Resources */ = {isa = PBXBuildFile; fileRef = D92EEDDF2B8FAE7A008C43E0 /* Logic */; };
 		E023656C2B8E68FB00C04C1E /* PhotoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E023656B2B8E68FB00C04C1E /* PhotoButton.swift */; };
 		E023656E2B8E690600C04C1E /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E023656D2B8E690600C04C1E /* NavigationButton.swift */; };
@@ -22,7 +24,6 @@
 		E0AA6EA62B8D11BC00FD8D82 /* GameplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA6EA52B8D11BC00FD8D82 /* GameplayView.swift */; };
 		E0AA6EA82B8D11BD00FD8D82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0AA6EA72B8D11BD00FD8D82 /* Assets.xcassets */; };
 		E0AA6EAB2B8D11BD00FD8D82 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0AA6EAA2B8D11BD00FD8D82 /* Preview Assets.xcassets */; };
-		E0AA6EB32B8D121700FD8D82 /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA6EB22B8D121700FD8D82 /* CameraModel.swift */; };
 		E0AA6EB52B8D122000FD8D82 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AA6EB42B8D122000FD8D82 /* CameraView.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,8 @@
 		D9190BFE2B8E7E8C00965D55 /* SharePlayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePlayViewModel.swift; sourceTree = "<group>"; };
 		D9190C002B8E7ECF00965D55 /* InvationSharePlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvationSharePlayView.swift; sourceTree = "<group>"; };
 		D9190C032B8E823B00965D55 /* MultiplayerMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplayerMain.swift; sourceTree = "<group>"; };
+		D9255AEF2B8FC55B0049696A /* GameplayViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameplayViewModel.swift; sourceTree = "<group>"; };
+		D9255AF12B8FC5C60049696A /* CameraModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
 		D92EEDDE2B8FA276008C43E0 /* Nano05.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Nano05.entitlements; sourceTree = "<group>"; };
 		D92EEDDF2B8FAE7A008C43E0 /* Logic */ = {isa = PBXFileReference; lastKnownFileType = text; path = Logic; sourceTree = "<group>"; };
 		E023656B2B8E68FB00C04C1E /* PhotoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoButton.swift; sourceTree = "<group>"; };
@@ -44,7 +47,6 @@
 		E0AA6EA52B8D11BC00FD8D82 /* GameplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplayView.swift; sourceTree = "<group>"; };
 		E0AA6EA72B8D11BD00FD8D82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0AA6EAA2B8D11BD00FD8D82 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E0AA6EB22B8D121700FD8D82 /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
 		E0AA6EB42B8D122000FD8D82 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +79,14 @@
 				D9190C032B8E823B00965D55 /* MultiplayerMain.swift */,
 			);
 			path = MultiplayerrView;
+			sourceTree = "<group>";
+		};
+		D9255AEE2B8FC5180049696A /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				D9255AEF2B8FC55B0049696A /* GameplayViewModel.swift */,
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 		E023656A2B8E68E100C04C1E /* Buttons */ = {
@@ -125,6 +135,7 @@
 		E0AA6EA22B8D11BC00FD8D82 /* Nano05 */ = {
 			isa = PBXGroup;
 			children = (
+				D9255AEE2B8FC5180049696A /* Objects */,
 				D92EEDDE2B8FA276008C43E0 /* Nano05.entitlements */,
 				D9190BF92B8E7DCE00965D55 /* SharePlay */,
 				E02365722B8E7A6200C04C1E /* Extensions */,
@@ -150,7 +161,7 @@
 		E0AA6EB12B8D11F600FD8D82 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
-				E0AA6EB22B8D121700FD8D82 /* CameraModel.swift */,
+				D9255AF12B8FC5C60049696A /* CameraModel.swift */,
 				E0AA6EB42B8D122000FD8D82 /* CameraView.swift */,
 			);
 			path = Camera;
@@ -229,17 +240,18 @@
 			files = (
 				E023656E2B8E690600C04C1E /* NavigationButton.swift in Sources */,
 				D9190C042B8E823B00965D55 /* MultiplayerMain.swift in Sources */,
+				D9255AF22B8FC5C60049696A /* CameraModel.swift in Sources */,
 				E02365712B8E69C700C04C1E /* MenuView.swift in Sources */,
 				D9190BFB2B8E7E1300965D55 /* GroupActivityMetadate.swift in Sources */,
 				E0AA6EA62B8D11BC00FD8D82 /* GameplayView.swift in Sources */,
 				E0AA6EA42B8D11BC00FD8D82 /* Nano05App.swift in Sources */,
 				E02365742B8E7A8200C04C1E /* UIimageExtension.swift in Sources */,
 				C010E7D42B8E55A800F4A52C /* HomeObjects.mlmodel in Sources */,
-				E0AA6EB32B8D121700FD8D82 /* CameraModel.swift in Sources */,
 				D9190BFD2B8E7E6800965D55 /* SharePlayModel.swift in Sources */,
 				E0AA6EB52B8D122000FD8D82 /* CameraView.swift in Sources */,
 				D9190BFF2B8E7E8C00965D55 /* SharePlayViewModel.swift in Sources */,
 				D9190C012B8E7ECF00965D55 /* InvationSharePlayView.swift in Sources */,
+				D9255AF02B8FC55B0049696A /* GameplayViewModel.swift in Sources */,
 				E023656C2B8E68FB00C04C1E /* PhotoButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
