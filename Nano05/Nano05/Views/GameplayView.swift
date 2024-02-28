@@ -29,7 +29,9 @@ struct GameplayView: View {
                         .padding(40)
                 }
             }
-        }.onAppear {
+        }
+        .navigationBarBackButtonHidden(true)
+        .onAppear {
             model.chooseObject()
         }
     }
