@@ -10,23 +10,27 @@ import SwiftUI
 struct GameplayView: View {
 
     @EnvironmentObject var cameraVm: CameraModel
+    @StateObject var model = GameplayViewModel()
     
     var body: some View {
         VStack{
-            
+            Text("\(model.toFindObject)")
+            Text("\(model.numberOfObjects)")
             ZStack {
                 CameraView(image: cameraVm.frama)
                     .ignoresSafeArea()
                 VStack{
                     Spacer()
-                    PhotoButton(action: cameraVm.classifyImage)
+                    PhotoButton(action:{
+                        if model.toFindObject == cameraVm.classifyImage(){
+                            model.findedObject()
+                        }
+                    })
                         .padding(40)
                 }
             }
+        }.onAppear {
+            model.chooseObject()
         }
     }
-}
-
-#Preview {
-    GameplayView()
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C010E7D42B8E55A800F4A52C /* HomeObjects.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C010E7D32B8E55A800F4A52C /* HomeObjects.mlmodel */; };
+		C010E7D72B8FA98800F4A52C /* GameplayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C010E7D62B8FA98800F4A52C /* GameplayViewModel.swift */; };
 		E023656C2B8E68FB00C04C1E /* PhotoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E023656B2B8E68FB00C04C1E /* PhotoButton.swift */; };
 		E023656E2B8E690600C04C1E /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E023656D2B8E690600C04C1E /* NavigationButton.swift */; };
 		E02365712B8E69C700C04C1E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02365702B8E69C700C04C1E /* MenuView.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		C010E7D32B8E55A800F4A52C /* HomeObjects.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = HomeObjects.mlmodel; sourceTree = "<group>"; };
+		C010E7D62B8FA98800F4A52C /* GameplayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplayViewModel.swift; sourceTree = "<group>"; };
 		E023656B2B8E68FB00C04C1E /* PhotoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoButton.swift; sourceTree = "<group>"; };
 		E023656D2B8E690600C04C1E /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
 		E02365702B8E69C700C04C1E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -46,6 +48,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C010E7D52B8FA8EF00F4A52C /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				C010E7D62B8FA98800F4A52C /* GameplayViewModel.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
 		E023656A2B8E68E100C04C1E /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +101,7 @@
 		E0AA6EA22B8D11BC00FD8D82 /* Nano05 */ = {
 			isa = PBXGroup;
 			children = (
+				C010E7D52B8FA8EF00F4A52C /* Objects */,
 				E02365722B8E7A6200C04C1E /* Extensions */,
 				E023656F2B8E695C00C04C1E /* Views */,
 				E023656A2B8E68E100C04C1E /* Buttons */,
@@ -196,6 +207,7 @@
 				E0AA6EA42B8D11BC00FD8D82 /* Nano05App.swift in Sources */,
 				E02365742B8E7A8200C04C1E /* UIimageExtension.swift in Sources */,
 				C010E7D42B8E55A800F4A52C /* HomeObjects.mlmodel in Sources */,
+				C010E7D72B8FA98800F4A52C /* GameplayViewModel.swift in Sources */,
 				E0AA6EB32B8D121700FD8D82 /* CameraModel.swift in Sources */,
 				E0AA6EB52B8D122000FD8D82 /* CameraView.swift in Sources */,
 				E023656C2B8E68FB00C04C1E /* PhotoButton.swift in Sources */,
@@ -332,7 +344,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Nano05/Preview Content\"";
-				DEVELOPMENT_TEAM = SRXHT55569;
+				DEVELOPMENT_TEAM = SJYF62B3PZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Permission to use device camera";
@@ -362,7 +374,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Nano05/Preview Content\"";
-				DEVELOPMENT_TEAM = SRXHT55569;
+				DEVELOPMENT_TEAM = SJYF62B3PZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Permission to use device camera";
