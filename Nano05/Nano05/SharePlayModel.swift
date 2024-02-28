@@ -13,4 +13,5 @@ struct SharePlayModelData: Codable{
     var hitsCount: UInt = 0
     //Termino de jogo
     var isFinishGame: Bool = false
+    //Verifica se ja comecou a partida
 }

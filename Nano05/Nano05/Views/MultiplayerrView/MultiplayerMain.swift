@@ -16,26 +16,16 @@ struct MultiplayerMain: View {
     var body: some View {
         NavigationStack {
             VStack {
-                if let session = vm.groupSession{
-                    Text("\(String(describing: session.state))")
-                        .font(.system(size: 16, weight: .bold))
-                        .foregroundStyle(Color.green)
-                }else{
-                    Text("Not shared")
-                        .font(.system(size: 16, weight: .bold))
-                        .foregroundStyle(Color.red)
-                }
-                
-            }.toolbar{
                 Button{
-                    if groupStateObserver.isEligibleForGroupSession{
-                        vm.startSession()
-                    }else{
-                        isActivity = true
-                    }
+                    startSession()
                 }label: {
-                    Label("Share", systemImage: "shareplay")
-                }
+                    Label("Invite Friend", systemImage: "shareplay")
+                        .font(.system(size: 22))
+                }.buttonStyle(.borderedProminent)
+                    .controlSize(.large)
+                    .foregroundStyle(Color.black)
+            }.toolbar{
+                
             }
             .navigationTitle("SharePlay")
             .sheet(isPresented: $isActivity){
@@ -50,6 +40,13 @@ struct MultiplayerMain: View {
         }
     }
     
+    private func startSession(){
+        if groupStateObserver.isEligibleForGroupSession{
+            vm.startSession()
+            return
+        }
+        isActivity = true
+    }
 }
 
 #Preview {

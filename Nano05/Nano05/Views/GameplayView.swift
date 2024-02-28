@@ -12,7 +12,6 @@ struct GameplayView: View {
     
     var body: some View {
         VStack{
-            
             ZStack {
                 CameraView(image: cameraVm.frama)
                     .ignoresSafeArea()
@@ -26,6 +25,6 @@ struct GameplayView: View {
     }
 }
 
-#Preview {
-    GameplayView()
-}
+//#Preview {
+//    GameplayView()
+//}

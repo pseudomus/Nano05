@@ -1,0 +1,23 @@
+# Logica de compartilhamento
+
+Model do dispositivo do jogador da "casa".
+    nao nescessario, pois ja tenho os dados de acertos locais.
+
+
+Model do dispositivo adversario.
+  amountOfHits: Int
+  isFinish: Bool // se for 'true' acabar partida e dar a vitoria para o com maior pontuacao.
+  isReady: Bool Varivel que inicia a competicao
+  
+
+1. Enviar model(qntAcertos, isFinish, isReady) do dispositvo local.
+2. Dipositivo local ira receber os dados do adversario.
+3. Comparar varivel 'isFinish' do adversario com a do dispotivo.
+    if varivel == true{
+        verificar pontucao;
+        verificar ganhador;
+    }
+
+
+  
+  

@@ -13,6 +13,7 @@
 		D9190BFF2B8E7E8C00965D55 /* SharePlayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9190BFE2B8E7E8C00965D55 /* SharePlayViewModel.swift */; };
 		D9190C012B8E7ECF00965D55 /* InvationSharePlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9190C002B8E7ECF00965D55 /* InvationSharePlayView.swift */; };
 		D9190C042B8E823B00965D55 /* MultiplayerMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9190C032B8E823B00965D55 /* MultiplayerMain.swift */; };
+		D92EEDE02B8FAE7A008C43E0 /* Logic in Resources */ = {isa = PBXBuildFile; fileRef = D92EEDDF2B8FAE7A008C43E0 /* Logic */; };
 		E023656C2B8E68FB00C04C1E /* PhotoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E023656B2B8E68FB00C04C1E /* PhotoButton.swift */; };
 		E023656E2B8E690600C04C1E /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E023656D2B8E690600C04C1E /* NavigationButton.swift */; };
 		E02365712B8E69C700C04C1E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02365702B8E69C700C04C1E /* MenuView.swift */; };
@@ -33,6 +34,7 @@
 		D9190C002B8E7ECF00965D55 /* InvationSharePlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvationSharePlayView.swift; sourceTree = "<group>"; };
 		D9190C032B8E823B00965D55 /* MultiplayerMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplayerMain.swift; sourceTree = "<group>"; };
 		D92EEDDE2B8FA276008C43E0 /* Nano05.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Nano05.entitlements; sourceTree = "<group>"; };
+		D92EEDDF2B8FAE7A008C43E0 /* Logic */ = {isa = PBXFileReference; lastKnownFileType = text; path = Logic; sourceTree = "<group>"; };
 		E023656B2B8E68FB00C04C1E /* PhotoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoButton.swift; sourceTree = "<group>"; };
 		E023656D2B8E690600C04C1E /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
 		E02365702B8E69C700C04C1E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				D9190BFC2B8E7E6800965D55 /* SharePlayModel.swift */,
 				D9190BFE2B8E7E8C00965D55 /* SharePlayViewModel.swift */,
 				D9190C002B8E7ECF00965D55 /* InvationSharePlayView.swift */,
+				D92EEDDF2B8FAE7A008C43E0 /* Logic */,
 			);
 			name = SharePlay;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D92EEDE02B8FAE7A008C43E0 /* Logic in Resources */,
 				E0AA6EAB2B8D11BD00FD8D82 /* Preview Assets.xcassets in Resources */,
 				E0AA6EA82B8D11BD00FD8D82 /* Assets.xcassets in Resources */,
 			);

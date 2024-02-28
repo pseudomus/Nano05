@@ -6,6 +6,7 @@
 //
 
 import GroupActivities
+import Combine
 import SwiftUI
 
 //MARK: - Gerencia funcionalidades do SharePlay
@@ -14,13 +15,9 @@ class SharePlayViewModel: ObservableObject{
     @Published  var userData: SharePlayModelData = SharePlayModelData()
     @Published var groupSession: GroupSession<SharePlayActivityMetadata>?
     var groupSessionMesager: GroupSessionMessenger?
+    var subscriptions = Set<AnyCancellable>()
     var taks = Set<Task<Void, Never>>()
     
-    //Change hitValue
-    public func incrementValue(){
-        userData.hitsCount += 1
-        sendData(userData)
-    }
     
     //Start Session
     public func startSession(){
@@ -31,6 +28,12 @@ class SharePlayViewModel: ObservableObject{
                 print("Error in init session [SharePlayViewModel.startSession] - ", error.localizedDescription)
             }
         }
+    }
+    
+    //Change hitValue
+    public func incrementValue(){
+        userData.hitsCount += 1
+        sendData(userData)
     }
     
     //Send Data
@@ -50,7 +53,14 @@ class SharePlayViewModel: ObservableObject{
         self.groupSessionMesager = mensager
         self.groupSession = session
         
-        // Criar  groupSession.$state que reseta?
+        //verifica o status da session se for invalidated reseta os dados.
+        groupSession?.$state
+            .sink { state in
+                if case .invalidated = state{
+                    self.groupSession = nil
+                    //chamar funcao que reseta o model data(UserData)
+                }
+            }.store(in: &subscriptions)
         
         taks.insert(
             Task{
