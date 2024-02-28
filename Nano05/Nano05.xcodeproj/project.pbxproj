@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E97AA822B8FD27700986F37 /* UpsideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E97AA812B8FD27700986F37 /* UpsideView.swift */; };
 		C010E7D42B8E55A800F4A52C /* HomeObjects.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C010E7D32B8E55A800F4A52C /* HomeObjects.mlmodel */; };
 		D9190BFB2B8E7E1300965D55 /* GroupActivityMetadate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9190BFA2B8E7E1300965D55 /* GroupActivityMetadate.swift */; };
 		D9190BFD2B8E7E6800965D55 /* SharePlayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9190BFC2B8E7E6800965D55 /* SharePlayModel.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E97AA812B8FD27700986F37 /* UpsideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpsideView.swift; sourceTree = "<group>"; };
 		C010E7D32B8E55A800F4A52C /* HomeObjects.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = HomeObjects.mlmodel; sourceTree = "<group>"; };
 		D9190BFA2B8E7E1300965D55 /* GroupActivityMetadate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupActivityMetadate.swift; sourceTree = "<group>"; };
 		D9190BFC2B8E7E6800965D55 /* SharePlayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePlayModel.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				D9190C022B8E81D300965D55 /* MultiplayerrView */,
 				E0AA6EA52B8D11BC00FD8D82 /* GameplayView.swift */,
 				E02365702B8E69C700C04C1E /* MenuView.swift */,
+				2E97AA812B8FD27700986F37 /* UpsideView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E97AA822B8FD27700986F37 /* UpsideView.swift in Sources */,
 				E023656E2B8E690600C04C1E /* NavigationButton.swift in Sources */,
 				D9255AF42B8FCEB40049696A /* MultiplayerGameView.swift in Sources */,
 				D9190C042B8E823B00965D55 /* MultiplayerMain.swift in Sources */,
