@@ -24,7 +24,15 @@ struct MultiplayerMain: View {
                 }.buttonStyle(.borderedProminent)
                     .controlSize(.large)
                     .foregroundStyle(Color.black)
-            }.toolbar{
+    
+                NavigationLink{
+                    MultiplayerGameView()
+                }label: {
+                    Label("Jogar", systemImage: "play.fill")
+                        .font(.system(size: 22))
+                }.buttonStyle(.borderedProminent)
+                    .controlSize(.large)
+                    .foregroundStyle(Color.black)
                 
             }
             .navigationTitle("SharePlay")

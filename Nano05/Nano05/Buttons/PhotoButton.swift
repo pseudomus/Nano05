@@ -1,8 +1,7 @@
 import SwiftUI
 
 struct PhotoButton: View {
-
-    var action:()-> Void
+    var action:() -> Void
 
     var body: some View {
         VStack{

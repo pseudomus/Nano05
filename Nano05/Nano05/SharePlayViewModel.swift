@@ -31,9 +31,10 @@ class SharePlayViewModel: ObservableObject{
     }
     
     //Change hitValue
-    public func incrementValue(){
-        userData.hitsCount += 1
-        sendData(userData)
+    public func incrementValue(_ value: Int){
+//        userData.hitsCount += 1
+        let newUserData = SharePlayModelData(hitsCount: value)
+        sendData(newUserData)
     }
     
     //Send Data

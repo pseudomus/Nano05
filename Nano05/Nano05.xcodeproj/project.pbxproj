@@ -15,6 +15,7 @@
 		D9190C042B8E823B00965D55 /* MultiplayerMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9190C032B8E823B00965D55 /* MultiplayerMain.swift */; };
 		D9255AF02B8FC55B0049696A /* GameplayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9255AEF2B8FC55B0049696A /* GameplayViewModel.swift */; };
 		D9255AF22B8FC5C60049696A /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9255AF12B8FC5C60049696A /* CameraModel.swift */; };
+		D9255AF42B8FCEB40049696A /* MultiplayerGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9255AF32B8FCEB40049696A /* MultiplayerGameView.swift */; };
 		D92EEDE02B8FAE7A008C43E0 /* Logic in Resources */ = {isa = PBXBuildFile; fileRef = D92EEDDF2B8FAE7A008C43E0 /* Logic */; };
 		E023656C2B8E68FB00C04C1E /* PhotoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E023656B2B8E68FB00C04C1E /* PhotoButton.swift */; };
 		E023656E2B8E690600C04C1E /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E023656D2B8E690600C04C1E /* NavigationButton.swift */; };
@@ -36,6 +37,7 @@
 		D9190C032B8E823B00965D55 /* MultiplayerMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplayerMain.swift; sourceTree = "<group>"; };
 		D9255AEF2B8FC55B0049696A /* GameplayViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameplayViewModel.swift; sourceTree = "<group>"; };
 		D9255AF12B8FC5C60049696A /* CameraModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
+		D9255AF32B8FCEB40049696A /* MultiplayerGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplayerGameView.swift; sourceTree = "<group>"; };
 		D92EEDDE2B8FA276008C43E0 /* Nano05.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Nano05.entitlements; sourceTree = "<group>"; };
 		D92EEDDF2B8FAE7A008C43E0 /* Logic */ = {isa = PBXFileReference; lastKnownFileType = text; path = Logic; sourceTree = "<group>"; };
 		E023656B2B8E68FB00C04C1E /* PhotoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoButton.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				D9190C032B8E823B00965D55 /* MultiplayerMain.swift */,
+				D9255AF32B8FCEB40049696A /* MultiplayerGameView.swift */,
 			);
 			path = MultiplayerrView;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E023656E2B8E690600C04C1E /* NavigationButton.swift in Sources */,
+				D9255AF42B8FCEB40049696A /* MultiplayerGameView.swift in Sources */,
 				D9190C042B8E823B00965D55 /* MultiplayerMain.swift in Sources */,
 				D9255AF22B8FC5C60049696A /* CameraModel.swift in Sources */,
 				E02365712B8E69C700C04C1E /* MenuView.swift in Sources */,
@@ -387,7 +391,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Nano05/Preview Content\"";
-				DEVELOPMENT_TEAM = SRXHT55569;
+				DEVELOPMENT_TEAM = 335BRL9A43;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Permission to use device camera";
@@ -401,7 +405,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = SwiftUI.Nano5;
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftUI.Nano;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -418,7 +422,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Nano05/Preview Content\"";
-				DEVELOPMENT_TEAM = SRXHT55569;
+				DEVELOPMENT_TEAM = 335BRL9A43;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Permission to use device camera";
@@ -432,7 +436,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = SwiftUI.Nano5;
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftUI.Nano;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

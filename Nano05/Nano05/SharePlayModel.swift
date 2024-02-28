@@ -10,7 +10,7 @@ import Foundation
 //MARK: - Modelo que sera enviado pelo shareplay ou recebudo
 struct SharePlayModelData: Codable{
     //Quantidade de acertos
-    var hitsCount: UInt = 0
+    var hitsCount: Int = 0
     //Termino de jogo
     var isFinishGame: Bool = false
     //Verifica se ja comecou a partida
