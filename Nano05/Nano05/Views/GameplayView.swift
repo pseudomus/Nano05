@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GameplayView: View {
 
+    @EnvironmentObject var navigationModel: NavigationModel
     @EnvironmentObject var cameraVm: CameraModel
     @StateObject var model = GameplayViewModel()
     
@@ -16,6 +17,13 @@ struct GameplayView: View {
         VStack{
             Text("\(model.toFindObject)")
             Text("\(model.numberOfObjects)")
+            
+            Button {
+                navigationModel.pop()
+            } label: {
+                NavigationButton(label: "back", color: .red)
+            }
+            
             ZStack {
                 CameraView(image: cameraVm.frama)
                     .ignoresSafeArea()

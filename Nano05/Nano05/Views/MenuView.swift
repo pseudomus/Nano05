@@ -1,18 +1,43 @@
 import SwiftUI
 
+enum Screens: Hashable {
+    case menu
+    case gameplay
+    case multiplayer
+    case end
+}
+
+
 struct MenuView: View {
+    
+    @EnvironmentObject var navigationModel: NavigationModel
+    
     var body: some View {
-        NavigationStack{
+        NavigationStack(path: $navigationModel.screens){
             VStack{
-                NavigationLink {
-                    GameplayView()
+                Button {
+                    navigationModel.push(.gameplay)
                 } label: {
                     NavigationButton(label: "SinglePlayer", color: .blue)
                 }
-                NavigationLink {
-                    MultiplayerMain()
+                .navigationBarBackButtonHidden()
+                
+                Button {
+                    navigationModel.push(.multiplayer)
                 } label: {
                     NavigationButton(label: "Multiplayer", color: .blue)
+                }
+                .navigationBarBackButtonHidden()
+            }                .navigationDestination(for: Screens.self) { screen in
+                switch screen {
+                case .menu:
+                    MenuView()
+                case .gameplay:
+                    GameplayView()
+                case .multiplayer:
+                    MultiplayerGameView()
+                case .end:
+                    EndView()
                 }
             }
         }

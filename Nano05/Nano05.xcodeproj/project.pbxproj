@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2E97AA822B8FD27700986F37 /* UpsideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E97AA812B8FD27700986F37 /* UpsideView.swift */; };
+		2E97AA862B90175C00986F37 /* NavigationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E97AA852B90175C00986F37 /* NavigationModel.swift */; };
+		2E97AA882B9017DB00986F37 /* EndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E97AA872B9017DB00986F37 /* EndView.swift */; };
 		C010E7D42B8E55A800F4A52C /* HomeObjects.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C010E7D32B8E55A800F4A52C /* HomeObjects.mlmodel */; };
 		D9190BFB2B8E7E1300965D55 /* GroupActivityMetadate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9190BFA2B8E7E1300965D55 /* GroupActivityMetadate.swift */; };
 		D9190BFD2B8E7E6800965D55 /* SharePlayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9190BFC2B8E7E6800965D55 /* SharePlayModel.swift */; };
@@ -31,6 +33,8 @@
 
 /* Begin PBXFileReference section */
 		2E97AA812B8FD27700986F37 /* UpsideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpsideView.swift; sourceTree = "<group>"; };
+		2E97AA852B90175C00986F37 /* NavigationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModel.swift; sourceTree = "<group>"; };
+		2E97AA872B9017DB00986F37 /* EndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndView.swift; sourceTree = "<group>"; };
 		C010E7D32B8E55A800F4A52C /* HomeObjects.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = HomeObjects.mlmodel; sourceTree = "<group>"; };
 		D9190BFA2B8E7E1300965D55 /* GroupActivityMetadate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupActivityMetadate.swift; sourceTree = "<group>"; };
 		D9190BFC2B8E7E6800965D55 /* SharePlayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePlayModel.swift; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 				E0AA6EA52B8D11BC00FD8D82 /* GameplayView.swift */,
 				E02365702B8E69C700C04C1E /* MenuView.swift */,
 				2E97AA812B8FD27700986F37 /* UpsideView.swift */,
+				2E97AA872B9017DB00986F37 /* EndView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 				E023656A2B8E68E100C04C1E /* Buttons */,
 				E0AA6EB12B8D11F600FD8D82 /* Camera */,
 				E0AA6EA32B8D11BC00FD8D82 /* Nano05App.swift */,
+				2E97AA852B90175C00986F37 /* NavigationModel.swift */,
 				C010E7D32B8E55A800F4A52C /* HomeObjects.mlmodel */,
 				E0AA6EA72B8D11BD00FD8D82 /* Assets.xcassets */,
 				E0AA6EA92B8D11BD00FD8D82 /* Preview Content */,
@@ -249,12 +255,14 @@
 				D9255AF42B8FCEB40049696A /* MultiplayerGameView.swift in Sources */,
 				D9190C042B8E823B00965D55 /* MultiplayerMain.swift in Sources */,
 				D9255AF22B8FC5C60049696A /* CameraModel.swift in Sources */,
+				2E97AA862B90175C00986F37 /* NavigationModel.swift in Sources */,
 				E02365712B8E69C700C04C1E /* MenuView.swift in Sources */,
 				D9190BFB2B8E7E1300965D55 /* GroupActivityMetadate.swift in Sources */,
 				E0AA6EA62B8D11BC00FD8D82 /* GameplayView.swift in Sources */,
 				E0AA6EA42B8D11BC00FD8D82 /* Nano05App.swift in Sources */,
 				E02365742B8E7A8200C04C1E /* UIimageExtension.swift in Sources */,
 				C010E7D42B8E55A800F4A52C /* HomeObjects.mlmodel in Sources */,
+				2E97AA882B9017DB00986F37 /* EndView.swift in Sources */,
 				D9190BFD2B8E7E6800965D55 /* SharePlayModel.swift in Sources */,
 				E0AA6EB52B8D122000FD8D82 /* CameraView.swift in Sources */,
 				D9190BFF2B8E7E8C00965D55 /* SharePlayViewModel.swift in Sources */,
@@ -395,7 +403,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Nano05/Preview Content\"";
-				DEVELOPMENT_TEAM = 335BRL9A43;
+				DEVELOPMENT_TEAM = J7Y95G67T3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Permission to use device camera";
@@ -409,7 +417,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = SwiftUI.Nano;
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftUI.Nano500;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -426,7 +434,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Nano05/Preview Content\"";
-				DEVELOPMENT_TEAM = 335BRL9A43;
+				DEVELOPMENT_TEAM = J7Y95G67T3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Permission to use device camera";
@@ -440,7 +448,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = SwiftUI.Nano;
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftUI.Nano500;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
