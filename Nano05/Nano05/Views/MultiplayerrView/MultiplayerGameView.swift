@@ -66,7 +66,7 @@ struct MultiplayerGameView: View {
                                     }
                                 Text("|")
                                 Text("rival:")
-                                Text("\(sharePlayVm.userData.hitsCount)")
+                                Text("\(sharePlayVm.opponentData.hitsCount)")
                                     .foregroundStyle(.red)
                             }
                         }
