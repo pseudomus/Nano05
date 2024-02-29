@@ -8,24 +8,19 @@
 import SwiftUI
 
 struct UpsideView: View {
-    
-    var isChecked = false
-    var itemName = ""
+
+    var numberOfItemsFound:Int
     
     var body: some View {
-        HStack {
-            if isChecked {
-                Image(systemName: "checkmark.square")
-                Text("Geladeira")
-                
-            } else {
-                Image(systemName: "square")
-                Text("Geladeira")
+        ZStack{
+            Color.black
+            VStack {
+                    Text("\(numberOfItemsFound)//10")
             }
         }
     }
 }
 
 #Preview {
-    UpsideView()
+    UpsideView(numberOfItemsFound: 2)
 }

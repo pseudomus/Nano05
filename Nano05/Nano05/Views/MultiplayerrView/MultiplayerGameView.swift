@@ -14,33 +14,58 @@ struct MultiplayerGameView: View {
     
     var body: some View {
         VStack{
-            Text("\(model.toFindObject)")
-            
-            HStack {
-                Text("You:")
-                Text("\(model.numberOfObjects)")
-                    .onChange(of: model.numberOfObjects) { _, _ in
-                        sharePlayVm.incrementValue(model.numberOfObjects)
-                    }
-                
-                Spacer()
-                
-                Text("enemy:")
-                Text("\(sharePlayVm.userData.hitsCount)")
-            }.padding(.horizontal)
-            
-            
             ZStack {
                 CameraView(image: cameraVm.frama)
                     .ignoresSafeArea()
                 VStack{
                     Spacer()
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 40)
+                            .foregroundStyle(.black)
+                            .frame(width: 350,height: 70)
+                        HStack{
+                            Text("\(model.toFindObject)")
+                                .font(.system(size: 20))
+                                .frame(width: 270)
+                            Button{
+                                model.chooseObject()
+                            }label: {
+                                Image("ChangeButton")
+                                    .resizable()
+                                    .frame(width: 45,height: 45)
+                                    .scaledToFit()
+                            }
+                        }
+                    }
                     PhotoButton(action: {
                         if model.toFindObject == cameraVm.classifyImage(){
                             model.findedObject()
                         }
                     })
-                        .padding(40)
+                    .padding(40)
+                }
+                VStack{
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 40)
+                            .foregroundStyle(.black)
+                            .frame(width: UIScreen.main.bounds.width, height: 120)
+                            .foregroundStyle(.white)
+                        VStack{
+                            HStack {
+                                Text("You:")
+                                Text("\(model.numberOfObjects)")
+                                    .foregroundStyle(.green)
+                                    .onChange(of: model.numberOfObjects) { _, _ in
+                                        sharePlayVm.incrementValue(model.numberOfObjects)
+                                    }
+                                Text("|")
+                                Text("rival:")
+                                Text("\(sharePlayVm.userData.hitsCount)")
+                                    .foregroundStyle(.red)
+                            }
+                        }
+                    }
+                    Spacer()
                 }
             }
         }
@@ -49,9 +74,4 @@ struct MultiplayerGameView: View {
             model.chooseObject()
         }
     }
-}
-
-
-#Preview {
-    MultiplayerGameView()
 }
