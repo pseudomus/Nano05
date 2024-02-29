@@ -16,6 +16,7 @@ class SharePlayViewModel: ObservableObject{
     @Published var groupSession: GroupSession<SharePlayActivityMetadata>?
     @Published var invitedFriend: Bool = false
     @Published var myReady: Bool = false
+    @Published var allReady: Bool = false
     var groupSessionMesager: GroupSessionMessenger?
     var subscriptions = Set<AnyCancellable>()
     var taks = Set<Task<Void, Never>>()
@@ -100,6 +101,7 @@ class SharePlayViewModel: ObservableObject{
         if myReady && opponentData.isReady{
             print("Meu valor ready e: ", myReady, "\n", "enimigo ready e:", opponentData.isReady)
             //init timer
+            self.allReady = true
         }
     }
 }

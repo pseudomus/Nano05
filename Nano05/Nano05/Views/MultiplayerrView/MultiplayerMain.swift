@@ -17,6 +17,7 @@ struct MultiplayerMain: View {
         "Convide seu amigo.", "Selecione o contato do amigo que você deseja convidar.", "Aperte no botão que da maneira que irá convidar o seu amigo por mensagem ou ligação.", "Após seu amigo se conectar, basta os dois apertarem o botão de Pronto e o jogo irá começar."
     ]
     @State private var columns: [GridItem] = [GridItem()]
+//    let timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
     
     var body: some View {
             VStack {
@@ -39,8 +40,8 @@ struct MultiplayerMain: View {
                 }
     
                 Button {
-                    navigationVm.push(.multiplayer)
-//                    sharePlayvm.isReady()
+//                    navigationVm.push(.multiplayer)
+                    sharePlayvm.isReady()
                     
                 }label: {
                     NavigationButton(label: "Ready", color: sharePlayvm.invitedFriend ? .blue : .gray.opacity(0.5), systemName: "play.fill")
@@ -54,10 +55,11 @@ struct MultiplayerMain: View {
                 
             }
             .task {
-            for await session in  SharePlayActivityMetadata.sessions(){
-                sharePlayvm.configurationSession(session)
+                for await session in  SharePlayActivityMetadata.sessions(){
+                    sharePlayvm.configurationSession(session)
+                }
             }
-        }
+//            .navigation
     }
     
     private func startSession(){
