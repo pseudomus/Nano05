@@ -13,6 +13,8 @@ class GameplayViewModel: ObservableObject {
     @Published var timeRemaining = 180
     @Published var toFindObject: String = ""
     @Published var numberOfObjects: Int = 0
+    @Published var showPopOver: Bool = false
+    var objectIsRigt: Bool = false
     var findedObjects: [String] = []{
         didSet{
             numberOfObjects = findedObjects.count
