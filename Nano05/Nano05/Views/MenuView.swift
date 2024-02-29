@@ -5,7 +5,9 @@ enum Screens: Hashable {
     case gameplay
     case lobby
     case multiplayer
-    case end
+    case endd
+    case endWin
+    case endLose
 }
 
 
@@ -39,8 +41,12 @@ struct MenuView: View {
                     MultiplayerMain()
                 case .multiplayer:
                     MultiplayerGameView()
-                case .end:
+                case .endd:
                     EndView()
+                case .endWin:
+                    EndWinView()
+                case .endLose:
+                    EndLoseView()
                 }
             }
         }

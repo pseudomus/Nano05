@@ -78,7 +78,13 @@ struct MultiplayerGameView: View {
             if model.timeRemaining > 0 {
                 model.timeRemaining -= 1
             }else {
-                navigationModel.push(.end)
+                timer.timeout(.seconds(0.1), scheduler: DispatchQueue.main, options: nil, customError: nil)
+                navigationModel.push(.endLose)
+            }
+        })
+        .onReceive(model.$numberOfObjects, perform: { objects in
+            if model.numberOfObjects == 10 {
+                navigationModel.push(.endWin)
             }
         })
         .navigationBarBackButtonHidden(true)

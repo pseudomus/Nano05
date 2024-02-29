@@ -10,6 +10,7 @@ import SwiftUI
 struct GameplayView: View {
     
     let timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
+    
     @EnvironmentObject var navigationModel: NavigationModel
     @EnvironmentObject var cameraVm: CameraModel
     @StateObject var model = GameplayViewModel()
@@ -78,11 +79,20 @@ struct GameplayView: View {
                     Spacer()
                 }
             }
+                
         }.onReceive(timer, perform: { time in
             if model.timeRemaining > 0 {
                 model.timeRemaining -= 1
             }else {
-                navigationModel.push(.end)
+                if !model.defeatShow{
+                    navigationModel.push(.endLose)
+                    model.defeatShow = true
+                }
+            }
+        })
+        .onReceive(model.$numberOfObjects, perform: { objects in
+            if model.numberOfObjects == 10 {
+                navigationModel.push(.endWin)
             }
         })
         .navigationBarBackButtonHidden(true)
@@ -90,4 +100,6 @@ struct GameplayView: View {
             model.chooseObject()
         }
     }
+    
+
 }
