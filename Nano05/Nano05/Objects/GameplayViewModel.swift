@@ -14,6 +14,7 @@ class GameplayViewModel: ObservableObject {
     @Published var toFindObject: String = ""
     @Published var numberOfObjects: Int = 0
     @Published var showPopOver: Bool = false
+    @Published var defeatShow: Bool  = false
     var objectIsRigt: Bool = false
     var findedObjects: [String] = []{
         didSet{

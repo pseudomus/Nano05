@@ -11,10 +11,12 @@ struct EndView: View {
     
     @EnvironmentObject var navigationModel: NavigationModel
     @EnvironmentObject var sharePlayVM: SharePlayViewModel
+    @EnvironmentObject var gameplayVM: GameplayViewModel
     
     var finalResult = false
     
     var body: some View {
+        
         VStack {
             
             Spacer()
@@ -52,6 +54,7 @@ struct EndView: View {
         }
         .foregroundStyle(.black)
     }
+    
 }
 
 #Preview {
