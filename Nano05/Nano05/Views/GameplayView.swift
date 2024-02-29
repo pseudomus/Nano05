@@ -38,10 +38,27 @@ struct GameplayView: View {
                                     .scaledToFit()
                             }
                         }
-                    }
+                    }                            
+                    .popover(isPresented: $model.showPopOver,attachmentAnchor: .point(.top),arrowEdge: .bottom, content: {
+                        VStack{
+                            if model.objectIsRigt{
+                                Text("Correct object")
+                            }else {
+                                Text("Wrong object or cannot identify, try other angles")
+                            }
+                        }
+                        .presentationCompactAdaptation(.popover)
+                        .padding()
+                    })
+
                     PhotoButton(action:{
                         if model.toFindObject == cameraVm.classifyImage(){
+                            model.showPopOver = true
+                            model.objectIsRigt = true
                             model.findedObject()
+                        }else {
+                            model.objectIsRigt = false
+                            model.showPopOver = true
                         }
                     })
                         .padding(15)
