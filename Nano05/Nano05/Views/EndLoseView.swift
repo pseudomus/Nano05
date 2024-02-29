@@ -37,6 +37,7 @@ struct EndLoseView: View {
             } label: {
                 NavigationButton(label: "Menu", color: .white)
             }
+            .navigationBarBackButtonHidden()
             
             Spacer()
         }

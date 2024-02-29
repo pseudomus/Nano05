@@ -35,6 +35,7 @@ struct EndWinView: View {
             } label: {
                 NavigationButton(label: "Menu", color: .white)
             }
+            .navigationBarBackButtonHidden()
             
             Spacer()
         }
