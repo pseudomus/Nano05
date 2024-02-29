@@ -12,8 +12,9 @@ import SwiftUI
 //MARK: - Gerencia funcionalidades do SharePlay
 @MainActor
 class SharePlayViewModel: ObservableObject{
-    @Published  var userData: SharePlayModelData = SharePlayModelData()
+    @Published var userData: SharePlayModelData = SharePlayModelData()
     @Published var groupSession: GroupSession<SharePlayActivityMetadata>?
+    @Published var invitedFriend: Bool = false
     var groupSessionMesager: GroupSessionMessenger?
     var subscriptions = Set<AnyCancellable>()
     var taks = Set<Task<Void, Never>>()
@@ -32,8 +33,12 @@ class SharePlayViewModel: ObservableObject{
     
     //Change hitValue
     public func incrementValue(_ value: Int){
-//        userData.hitsCount += 1
         let newUserData = SharePlayModelData(hitsCount: value)
+        sendData(newUserData)
+    }
+    
+    public func isReady(){
+        let newUserData = SharePlayModelData(isFinishGame: true)
         sendData(newUserData)
     }
     
@@ -62,6 +67,14 @@ class SharePlayViewModel: ObservableObject{
                     //chamar funcao que reseta o model data(UserData)
                 }
             }.store(in: &subscriptions)
+        
+        groupSession?.$activeParticipants
+            .sink { activeParticipants in
+                if activeParticipants.count == 2{
+                    self.invitedFriend = true
+                }
+            }
+            .store(in: &subscriptions)
         
         taks.insert(
             Task{

@@ -1,18 +1,24 @@
 import SwiftUI
 
 struct NavigationButton: View {
-
-    var label:String
-    var color:Color
+    var label: String
+    var color: Color
+    var systemName: String?
 
     var body: some View {
-        VStack{
+        HStack{
+            Image(systemName: systemName ?? "")
+                .font(.system(size: 24))
+                .padding(.leading)
+            
             Text(label)
                 .bold()
-                .foregroundStyle(.white)
-                .frame(width: 144,height: 50)
-                .background(
-                    RoundedRectangle(cornerRadius: 20).foregroundStyle(color))
-        }
+                .padding(.trailing)
+                .frame(height: 60)
+            
+        }.background(
+            RoundedRectangle(cornerRadius: 20).foregroundStyle(color)
+        )
+        .foregroundStyle(.white)
     }
 }

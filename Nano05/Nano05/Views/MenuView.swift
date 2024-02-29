@@ -19,14 +19,14 @@ struct MenuView: View {
                 Button {
                     navigationModel.push(.gameplay)
                 } label: {
-                    NavigationButton(label: "SinglePlayer", color: .blue)
+                    NavigationButton(label: "SinglePlayer", color: .blue, systemName: "person.fill")
                 }
                 .navigationBarBackButtonHidden()
                 
                 Button {
                     navigationModel.push(.lobby)
                 } label: {
-                    NavigationButton(label: "Multiplayer", color: .blue)
+                    NavigationButton(label: "Multiplayer", color: .blue, systemName: "person.2.fill")
                 }
                 .navigationBarBackButtonHidden()
             }                .navigationDestination(for: Screens.self) { screen in
