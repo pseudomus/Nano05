@@ -3,6 +3,7 @@ import SwiftUI
 enum Screens: Hashable {
     case menu
     case gameplay
+    case lobby
     case multiplayer
     case end
 }
@@ -23,7 +24,7 @@ struct MenuView: View {
                 .navigationBarBackButtonHidden()
                 
                 Button {
-                    navigationModel.push(.multiplayer)
+                    navigationModel.push(.lobby)
                 } label: {
                     NavigationButton(label: "Multiplayer", color: .blue)
                 }
@@ -34,6 +35,8 @@ struct MenuView: View {
                     MenuView()
                 case .gameplay:
                     GameplayView()
+                case .lobby:
+                    MultiplayerMain()
                 case .multiplayer:
                     MultiplayerGameView()
                 case .end:

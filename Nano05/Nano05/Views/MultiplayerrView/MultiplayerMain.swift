@@ -10,11 +10,11 @@ import GroupActivities
 
 struct MultiplayerMain: View {
     @EnvironmentObject private var vm: SharePlayViewModel
+    @EnvironmentObject private var navigationVm: NavigationModel
     @StateObject var groupStateObserver = GroupStateObserver()
     @State var isActivity: Bool = false
     
     var body: some View {
-        NavigationStack {
             VStack {
                 Button{
                     startSession()
@@ -25,8 +25,8 @@ struct MultiplayerMain: View {
                     .controlSize(.large)
                     .foregroundStyle(Color.black)
     
-                NavigationLink{
-                    MultiplayerGameView()
+                Button {
+                    navigationVm.push(.multiplayer)
                 }label: {
                     Label("Jogar", systemImage: "play.fill")
                         .font(.system(size: 22))
@@ -40,8 +40,7 @@ struct MultiplayerMain: View {
                 ActivitySharingViewController(activity: SharePlayActivityMetadata())
                 
             }
-            
-        }.task {
+            .task {
             for await session in  SharePlayActivityMetadata.sessions(){
                 vm.configurationSession(session)
             }
