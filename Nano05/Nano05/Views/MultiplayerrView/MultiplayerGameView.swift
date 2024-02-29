@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct MultiplayerGameView: View {
+    
+    let timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
+    @EnvironmentObject var navigationModel: NavigationModel
     @EnvironmentObject var cameraVm: CameraModel
     @EnvironmentObject var sharePlayVm: SharePlayViewModel
     @StateObject var model = GameplayViewModel()
@@ -42,7 +45,7 @@ struct MultiplayerGameView: View {
                             model.findedObject()
                         }
                     })
-                    .padding(40)
+                    .padding(15)
                 }
                 VStack{
                     ZStack{
@@ -51,6 +54,9 @@ struct MultiplayerGameView: View {
                             .frame(width: UIScreen.main.bounds.width, height: 120)
                             .foregroundStyle(.white)
                         VStack{
+                            Text("\(model.timeRemaining.convertDurationToString())")
+                                .bold()
+                                .font(.system(size: 30))
                             HStack {
                                 Text("You:")
                                 Text("\(model.numberOfObjects)")
@@ -68,7 +74,13 @@ struct MultiplayerGameView: View {
                     Spacer()
                 }
             }
-        }
+        }.onReceive(timer, perform: { time in
+            if model.timeRemaining > 0 {
+                model.timeRemaining -= 1
+            }else {
+                navigationModel.push(.end)
+            }
+        })
         .navigationBarBackButtonHidden(true)
         .onAppear {
             model.chooseObject()
