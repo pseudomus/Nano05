@@ -14,4 +14,5 @@ struct SharePlayModelData: Codable{
     //Termino de jogo
     var isFinishGame: Bool = false
     //Verifica se ja comecou a partida
+    var isReady: Bool = false
 }

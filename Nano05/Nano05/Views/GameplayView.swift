@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct GameplayView: View {
-
     @EnvironmentObject var navigationModel: NavigationModel
     @EnvironmentObject var cameraVm: CameraModel
     @StateObject var model = GameplayViewModel()

@@ -20,7 +20,7 @@ struct MultiplayerMain: View {
     
     var body: some View {
             VStack {
-//                Spacer()
+                Spacer()
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(textTutorial.indices, id: \.self) { index in
                         let text = textTutorial[index]
@@ -39,8 +39,9 @@ struct MultiplayerMain: View {
                 }
     
                 Button {
-//                    navigationVm.push(.multiplayer)
-                    sharePlayvm.isReady()
+                    navigationVm.push(.multiplayer)
+//                    sharePlayvm.isReady()
+                    
                 }label: {
                     NavigationButton(label: "Ready", color: sharePlayvm.invitedFriend ? .blue : .gray.opacity(0.5), systemName: "play.fill")
                 }

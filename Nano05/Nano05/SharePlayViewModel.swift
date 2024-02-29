@@ -12,9 +12,10 @@ import SwiftUI
 //MARK: - Gerencia funcionalidades do SharePlay
 @MainActor
 class SharePlayViewModel: ObservableObject{
-    @Published var userData: SharePlayModelData = SharePlayModelData()
+    @Published var opponentData: SharePlayModelData = SharePlayModelData()
     @Published var groupSession: GroupSession<SharePlayActivityMetadata>?
     @Published var invitedFriend: Bool = false
+    @Published var myReady: Bool = false
     var groupSessionMesager: GroupSessionMessenger?
     var subscriptions = Set<AnyCancellable>()
     var taks = Set<Task<Void, Never>>()
@@ -38,7 +39,8 @@ class SharePlayViewModel: ObservableObject{
     }
     
     public func isReady(){
-        let newUserData = SharePlayModelData(isFinishGame: true)
+        self.myReady = true
+        let newUserData = SharePlayModelData(isReady: myReady)
         sendData(newUserData)
     }
     
@@ -88,7 +90,17 @@ class SharePlayViewModel: ObservableObject{
     }
     
     private func handle(_ model: SharePlayModelData){
-        self.userData = model
+        self.opponentData = model
+        verify()
+    }
+    
+    private func verify(){
+        //se ready do usuario == a do inimigo
+        //chamar o timer -> comcar o jogo
+        if myReady && opponentData.isReady{
+            print("Meu valor ready e: ", myReady, "\n", "enimigo ready e:", opponentData.isReady)
+            //init timer
+        }
     }
 }
 

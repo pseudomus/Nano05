@@ -26,7 +26,7 @@ struct MultiplayerGameView: View {
                 Spacer()
                 
                 Text("enemy:")
-                Text("\(sharePlayVm.userData.hitsCount)")
+                Text("\(sharePlayVm.opponentData.hitsCount)")
             }.padding(.horizontal)
             
             
