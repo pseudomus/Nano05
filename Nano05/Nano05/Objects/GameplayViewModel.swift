@@ -9,8 +9,11 @@ import Foundation
 
 class GameplayViewModel: ObservableObject {
 
-    var allObjects: [String] = ["Armario", "Bicicleta", "Bone", "Cadeira", "Calculadora", "Calçados", "Cama", "Camisa", "Caneca", "Caneta", "Chave de fenda", "Chuveiro", "Clipe de papel", "Cola Bastao", "Colher", "Espatula", "Flauta", "Frigideira", "Geladeira", "Impressora", "Livro:Caderno", "Lixeira", "Martelo", "Mesa", "Mochila", "Oculos", "Papel higienico", "Parafusadeira", "Pente", "Pilha", "Porta", "Regua", "Shorts:Calca", "Sofa", "TV", "Teclado", "Tesoura", "Toalha", "Vaso sanitario", "Ventilador"]
-    @Published var timeRemaining = 180 //MARK: - change for 180
+//    var allObjects: [String] = ["Armario", "Bicicleta", "Bone", "Cadeira", "Calculadora", "Calçados", "Cama", "Camisa", "Caneca", "Caneta", "Chave de fenda", "Chuveiro", "Clipe de papel", "Cola Bastao", "Colher", "Espatula", "Flauta", "Frigideira", "Geladeira", "Impressora", "Livro:Caderno", "Lixeira", "Martelo", "Mesa", "Mochila", "Oculos", "Papel higienico", "Parafusadeira", "Pente", "Pilha", "Porta", "Regua", "Shorts:Calca", "Sofa", "TV", "Teclado", "Tesoura", "Toalha", "Vaso sanitario", "Ventilador"]
+    
+    var allObjects: [String] = ["Bone", "Calçados", "Caneca", "Caneta", "Chave de fenda", "Colher", "Espatula", "Livro:Caderno", "Mochila", "Oculos", "Papel higienico", "Pente", "Teclado", "Tesoura", "Toalha"]
+    
+    @Published var timeRemaining = 120 //MARK: - change for 180
     @Published var toFindObject: String = ""
     @Published var numberOfObjects: Int = 0
     @Published var showPopOver: Bool = false

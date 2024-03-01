@@ -102,7 +102,7 @@ struct MultiplayerGameView: View {
             }
         }
         .onReceive(model.$numberOfObjects){ objects in
-            if model.numberOfObjects == 2{ //MARK: - change for 10
+            if model.numberOfObjects == 10{ //MARK: - change for 10
                 sharePlayVm.playerWiner()
                 navigationModel.push(.endWin)
             }
@@ -119,9 +119,10 @@ struct MultiplayerGameView: View {
     }
     
     private func verifyWiner(){
-        if model.numberOfObjects < sharePlayVm.opponentData.hitsCount || model.numberOfObjects == 10{
-            navigationModel.push(.endLose)
+        if model.numberOfObjects > sharePlayVm.opponentData.hitsCount || model.numberOfObjects == 10{
+            navigationModel.push(.endWin)
+            return
         }
-        navigationModel.push(.endWin)
+        navigationModel.push(.endLose)
     }
 }
