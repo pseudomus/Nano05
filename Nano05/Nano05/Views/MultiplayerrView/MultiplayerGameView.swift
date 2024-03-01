@@ -78,13 +78,15 @@ struct MultiplayerGameView: View {
             if model.timeRemaining > 0 {
                 model.timeRemaining -= 1
             }else {
-                timer.timeout(.seconds(0.1), scheduler: DispatchQueue.main, options: nil, customError: nil)
+                if !model.defeatShow{
+                    verifyWiner()
+                    model.defeatShow = true
+                }
 //                navigationModel.push(.endLose)
-                verifyWiner()
             }
         }
         .onReceive(model.$numberOfObjects){ objects in
-            if model.numberOfObjects == 10{
+            if model.numberOfObjects == 2{ //MARK: - change for 10
                 sharePlayVm.playerWiner()
                 navigationModel.push(.endWin)
             }
@@ -101,10 +103,9 @@ struct MultiplayerGameView: View {
     }
     
     private func verifyWiner(){
-        if model.numberOfObjects > sharePlayVm.opponentData.hitsCount || model.numberOfObjects == 10{
-            navigationModel.push(.endWin)
-            return
+        if model.numberOfObjects < sharePlayVm.opponentData.hitsCount || model.numberOfObjects == 10{
+            navigationModel.push(.endLose)
         }
-        navigationModel.push(.endLose)
+        navigationModel.push(.endWin)
     }
 }
