@@ -14,32 +14,34 @@ struct EndWinView: View {
     @EnvironmentObject var gameplayVM: GameplayViewModel
     
     var body: some View {
-        
-        VStack {
-            
-            Spacer()
-            
-            Text("Vitoria")
-                .font(.title)
-                .foregroundStyle(.white)
-                .padding()
-            
-            Text("Tempo restante")
-                .font(.subheadline)
-                .foregroundStyle(.white)
-            
-            Spacer()
-            
-            Button {
-                navigationModel.popToRoot()
-            } label: {
-                NavigationButton(label: "Menu", color: .white)
+        ZStack{
+            Color.black
+            VStack {
+                
+                Spacer()
+                
+                Text("Vitoria")
+                    .font(.title)
+                    .foregroundStyle(.white)
+                    .padding()
+                
+                Text("Tempo restante")
+                    .font(.subheadline)
+                    .foregroundStyle(.white)
+                
+                Spacer()
+                
+                Button {
+                    navigationModel.popToRoot()
+                } label: {
+                    NavigationButton(label: "Menu", color: .blue)
+                }
+                .navigationBarBackButtonHidden()
+                
+                Spacer()
             }
-            .navigationBarBackButtonHidden()
-            
-            Spacer()
+            .foregroundStyle(.black)
         }
-        .foregroundStyle(.black)
     }
     
 }
