@@ -39,7 +39,7 @@ struct GameplayView: View {
                             }
                         }
                     }                            
-                    .popover(isPresented: $model.showPopOver,attachmentAnchor: .point(.top),arrowEdge: .bottom, content: {
+                    .popover(isPresented: $model.showPopOver, attachmentAnchor: .point(.top),arrowEdge: .bottom){
                         VStack{
                             if model.objectIsRigt{
                                 Text("Correct object")
@@ -49,7 +49,7 @@ struct GameplayView: View {
                         }
                         .presentationCompactAdaptation(.popover)
                         .padding()
-                    })
+                    }
 
                     PhotoButton(action:{
                         if model.toFindObject == cameraVm.classifyImage(){
