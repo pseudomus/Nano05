@@ -74,22 +74,37 @@ struct MultiplayerGameView: View {
                     Spacer()
                 }
             }
-        }.onReceive(timer, perform: { time in
+        }.onReceive(timer){ time in
             if model.timeRemaining > 0 {
                 model.timeRemaining -= 1
             }else {
                 timer.timeout(.seconds(0.1), scheduler: DispatchQueue.main, options: nil, customError: nil)
-                navigationModel.push(.endLose)
+//                navigationModel.push(.endLose)
+                verifyWiner()
             }
-        })
-        .onReceive(model.$numberOfObjects, perform: { objects in
-            if model.numberOfObjects == 10 {
+        }
+        .onReceive(model.$numberOfObjects){ objects in
+            if model.numberOfObjects == 10{
+                sharePlayVm.playerWiner()
                 navigationModel.push(.endWin)
             }
-        })
+        }
+        .onReceive(sharePlayVm.$winner){ value in
+            if value{
+                navigationModel.push(.endLose)
+            }
+        }
         .navigationBarBackButtonHidden(true)
         .onAppear {
             model.chooseObject()
         }
+    }
+    
+    private func verifyWiner(){
+        if model.numberOfObjects > sharePlayVm.opponentData.hitsCount || model.numberOfObjects == 10{
+            navigationModel.push(.endWin)
+            return
+        }
+        navigationModel.push(.endLose)
     }
 }

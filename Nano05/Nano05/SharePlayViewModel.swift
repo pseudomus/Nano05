@@ -17,6 +17,7 @@ class SharePlayViewModel: ObservableObject{
     @Published var invitedFriend: Bool = false
     @Published var myReady: Bool = false
     @Published var allReady: Bool = false
+    @Published var winner: Bool = false
     var groupSessionMesager: GroupSessionMessenger?
     var subscriptions = Set<AnyCancellable>()
     var taks = Set<Task<Void, Never>>()
@@ -42,6 +43,11 @@ class SharePlayViewModel: ObservableObject{
     public func isReady(){
         self.myReady = true
         let newUserData = SharePlayModelData(isReady: myReady)
+        sendData(newUserData)
+    }
+    
+    public func playerWiner(){
+        let newUserData = SharePlayModelData(isFinishGame: true)
         sendData(newUserData)
     }
     
@@ -86,7 +92,6 @@ class SharePlayViewModel: ObservableObject{
                 }
             }
         )
-        
         groupSession?.join()
     }
     
@@ -96,9 +101,11 @@ class SharePlayViewModel: ObservableObject{
     }
     
     private func verify(){
-        if myReady && opponentData.isReady{
-            print("Meu valor ready e: ", myReady, "\n", "enimigo ready e:", opponentData.isReady)
+        if myReady && opponentData.isReady{ //verifica se os dois estao preparados 
             self.allReady = true
+        }
+        if opponentData.isFinishGame{
+            self.winner = true
         }
     }
 }

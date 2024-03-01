@@ -25,6 +25,7 @@ struct MultiplayerMain: View {
                 
                 if sharePlayvm.allReady{
                     Text("\(countdown)")
+                        .font(.system(size: 128, weight: .black))
                         .onChange(of: countdown) { _, _ in
                             decrementTimer()
                         }
@@ -48,13 +49,11 @@ struct MultiplayerMain: View {
                 }
     
                 Button {
-//                    navigationVm.push(.multiplayer)
                     sharePlayvm.isReady()
-                    
                 }label: {
                     NavigationButton(label: "Ready", color: sharePlayvm.invitedFriend ? .blue : .gray.opacity(0.5), systemName: "play.fill")
                 }
-                .disabled(!sharePlayvm.invitedFriend)
+//                .disabled(!sharePlayvm.invitedFriend)
                 
             }
             .navigationTitle("SharePlay")

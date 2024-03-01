@@ -31,7 +31,7 @@ struct MenuView: View {
                     NavigationButton(label: "Multiplayer", color: .blue, systemName: "person.2.fill")
                 }
                 .navigationBarBackButtonHidden()
-            }                .navigationDestination(for: Screens.self) { screen in
+            }.navigationDestination(for: Screens.self) { screen in
                 switch screen {
                 case .menu:
                     MenuView()
