@@ -96,11 +96,8 @@ class SharePlayViewModel: ObservableObject{
     }
     
     private func verify(){
-        //se ready do usuario == a do inimigo
-        //chamar o timer -> comcar o jogo
         if myReady && opponentData.isReady{
             print("Meu valor ready e: ", myReady, "\n", "enimigo ready e:", opponentData.isReady)
-            //init timer
             self.allReady = true
         }
     }

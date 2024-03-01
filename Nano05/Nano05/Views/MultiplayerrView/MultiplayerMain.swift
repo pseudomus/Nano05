@@ -17,18 +17,26 @@ struct MultiplayerMain: View {
         "Convide seu amigo.", "Selecione o contato do amigo que você deseja convidar.", "Aperte no botão que da maneira que irá convidar o seu amigo por mensagem ou ligação.", "Após seu amigo se conectar, basta os dois apertarem o botão de Pronto e o jogo irá começar."
     ]
     @State private var columns: [GridItem] = [GridItem()]
-//    let timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
+    @State private var countdown: Int = 5
     
     var body: some View {
             VStack {
                 Spacer()
-                LazyVGrid(columns: columns, spacing: 20) {
-                    ForEach(textTutorial.indices, id: \.self) { index in
-                        let text = textTutorial[index]
-                        Text("\(index+1). \(text)")
-                            .font(.system(size: 20, weight: .bold))
-                            .padding(.horizontal)
-                            .multilineTextAlignment(.center)
+                
+                if sharePlayvm.allReady{
+                    Text("\(countdown)")
+                        .onChange(of: countdown) { _, _ in
+                            decrementTimer()
+                        }
+                }else{
+                    LazyVGrid(columns: columns, spacing: 20) {
+                        ForEach(textTutorial.indices, id: \.self) { index in
+                            let text = textTutorial[index]
+                            Text("\(index+1). \(text)")
+                                .font(.system(size: 20, weight: .bold))
+                                .padding(.horizontal)
+                                .multilineTextAlignment(.center)
+                        }
                     }
                 }
                 
@@ -59,7 +67,12 @@ struct MultiplayerMain: View {
                     sharePlayvm.configurationSession(session)
                 }
             }
-//            .navigation
+            .onReceive(sharePlayvm.$allReady) { value in
+                print(value)
+                if value{
+                    decrementTimer()
+                }
+            }
     }
     
     private func startSession(){
@@ -68,6 +81,16 @@ struct MultiplayerMain: View {
             return
         }
         isActivity = true
+    }
+    
+    private func decrementTimer(){
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { _ in
+            if countdown == 0{
+                navigationVm.push(.multiplayer)
+                return
+            }
+            countdown -= 1
+        }
     }
 }
 
