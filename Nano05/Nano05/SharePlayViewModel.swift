@@ -54,6 +54,7 @@ class SharePlayViewModel: ObservableObject{
     
     //Send Data
     private func sendData(_ model: SharePlayModelData){
+        verify()
         Task{
             do{
                 _ = try await groupSessionMesager?.send(model)
