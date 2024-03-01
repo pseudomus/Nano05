@@ -23,7 +23,7 @@ struct MultiplayerMain: View {
             VStack {
                 Spacer()
                 
-                if sharePlayvm.allReady{
+                if !sharePlayvm.allReady{
                     Text("\(countdown)")
                         .font(.system(size: 128, weight: .black))
                         .onChange(of: countdown) { _, _ in
@@ -67,7 +67,7 @@ struct MultiplayerMain: View {
                 }
             }
             .onReceive(sharePlayvm.$allReady) { value in
-                if value{
+                if !value{
                     decrementTimer()
                 }
             }
