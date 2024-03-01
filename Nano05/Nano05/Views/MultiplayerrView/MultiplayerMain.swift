@@ -53,7 +53,7 @@ struct MultiplayerMain: View {
                 }label: {
                     NavigationButton(label: "Ready", color: sharePlayvm.invitedFriend ? .blue : .gray.opacity(0.5), systemName: "play.fill")
                 }
-//                .disabled(!sharePlayvm.invitedFriend)
+                .disabled(!sharePlayvm.invitedFriend)
                 
             }
             .navigationTitle("SharePlay")
@@ -67,7 +67,6 @@ struct MultiplayerMain: View {
                 }
             }
             .onReceive(sharePlayvm.$allReady) { value in
-                print(value)
                 if value{
                     decrementTimer()
                 }

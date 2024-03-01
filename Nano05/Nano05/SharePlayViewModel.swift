@@ -44,6 +44,7 @@ class SharePlayViewModel: ObservableObject{
         self.myReady = true
         let newUserData = SharePlayModelData(isReady: myReady)
         sendData(newUserData)
+        verify()
     }
     
     public func playerWiner(){
